@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="messenger.example.messengerclient.controllers.MainPageController">
+   <children>
+      <TitledPane animated="false" prefHeight="409.0" prefWidth="600.0" text="Messenger" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <content>
+            <AnchorPane>
+               <children>
+                  <HBox prefHeight="384.0"
+                        prefWidth="598.0"
+                        AnchorPane.bottomAnchor="0.0"
+                        AnchorPane.leftAnchor="0.0"
+                        AnchorPane.rightAnchor="0.0"
+                        AnchorPane.topAnchor="0.0">
+                     <children>
+                        <VBox prefHeight="355.0" prefWidth="149.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#onCreateTalkButtonClick" prefHeight="24.0" prefWidth="155.0" text="Create talk" />
+                              <ListView fx:id="talkListView" onMouseClicked="#onListClick" prefHeight="334.0" prefWidth="149.0" />
+                           </children>
+                        </VBox>
+                        <VBox fx:id="messagesView" prefHeight="355.0" prefWidth="440.0">
+                           <children>
+                               <HBox prefHeight="23.0" prefWidth="435.0">
+                                   <children>
+                                       <Label prefHeight="16.0" prefWidth="61.0">Talk title</Label>
+                                   </children>
+                               </HBox>
+                              <ScrollPane fx:id="messagesPanel" prefHeight="289.0" prefWidth="435.0" />
+                              <TextField prefHeight="54.0" prefWidth="435.0" promptText="Type text" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>
